@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('img')
             card.setAttribute('src','images/blank.jpg')
             card.setAttribute('data-id', i)
+            card.setAttribute('width',100)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
