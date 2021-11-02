@@ -1,52 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
       {
-        name: 'fries',
-        img: 'images/fries.png'
+        name: 'crane',
+        img: 'images/crane.png'
       },
       {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png'
+        name: 'parrot',
+        img: 'images/parrot.png'
       },
       {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png'
+        name: 'crane',
+        img: 'images/crane.png'
       },
       {
-        name: 'pizza',
-        img: 'images/pizza.png'
-      },
-      {
-        name: 'milkshake',
-        img: 'images/milkshake.png'
-      },
-      {
-        name: 'hotdog',
-        img: 'images/hotdog.png'
-      },
-      {
-        name: 'fries',
-        img: 'images/fries.png'
-      },
-      {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png'
-      },
-      {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png'
-      },
-      {
-        name: 'pizza',
-        img: 'images/pizza.png'
-      },
-      {
-        name: 'milkshake',
-        img: 'images/milkshake.png'
-      },
-      {
-        name: 'hotdog',
-        img: 'images/hotdog.png'
+        name: 'parrot',
+        img: 'images/parrot.png'
       }
     ];
 
@@ -63,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard(){
         for (let i=0; i < cardArray.length; i++){
             const card = document.createElement('img')
-            card.setAttribute('src','images/blank.png')
+            card.setAttribute('src','images/blank.jpg')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
@@ -85,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkForMatch(){
         const cards = document.querySelectorAll('img')
 
-        // Do DoubleClick on same Image. Switch to blank.png
+        // Do DoubleClick on same Image. Switch to blank.jpg
         if(cardsChosenIDs[0] === cardsChosenIDs[1]){
             alert('Do not select the same Image!')
-            cards[cardsChosenIDs[0]].setAttribute('src','images/blank.png') 
-            cards[cardsChosenIDs[1]].setAttribute('src','images/blank.png') 
+            cards[cardsChosenIDs[0]].setAttribute('src','images/blank.jpg') 
+            cards[cardsChosenIDs[1]].setAttribute('src','images/blank.jpg') 
         } else if(cardsChosen[0] === cardsChosen[1]){
             //  alert('Match found')
             cards[cardsChosenIDs[0]].setAttribute('src','images/white.png') 
