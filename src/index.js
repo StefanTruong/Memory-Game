@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ];
 
-    // Cards are randomly mixed and sorted
+    // Cards are randomly mixed and sorted using a callback function. Maybe it is a bit inefficient -> Use shuffle instead
     cardArray.sort(() => 0.5 - Math.random())
     console.log(cardArray)
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosen.push(cardArray[cardID].name)
         cardsChosenIDs.push(cardID)
         this.setAttribute('src',cardArray[cardID].img)
-        if (cardsChosen.length ===2){
+        if (cardsChosen.length === 2){
             setTimeout(checkForMatch, 500)
         }
         console.log(cardsChosenIDs)
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         cardsChosen = []
         cardsChosenIDs = []
-        resultDisplay.textContent = cardsWon.length //textContent is the same as InnerHTML
+        resultDisplay.textContent = cardsWon.length // Alternative to textContent is InnerHTML
         if(cardsWon.length == cardArray.length/2){
             resultDisplay.textContent = 'You Won'
         }
